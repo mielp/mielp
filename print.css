@@ -1,0 +1,36 @@
+@media print {
+  html {
+    font-size: 12pt;
+  }
+
+  body {
+    border: none;
+    background: #fff;
+    color: #000;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .hero {
+    display: block;
+    height: auto;
+  }
+
+  .highlight {
+    background: none;
+    color: inherit;
+  }
+
+  #skip-nav, .hero .fake-button {
+    display: none;
+  }
+
+  a[href^='https://']:after, a[href^='mailto:']:after {
+    content: ' (' attr(href) ')';
+    color: var(--body);
+    font-weight: 400;
+  }
+}

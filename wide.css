@@ -13,4 +13,23 @@
     height: calc(100vh - 4rem);
     vertical-align: middle;
   }
+
+  .anchor {
+    position: relative;
+  }
+
+  .anchor:before {
+    content: '#';
+    position: absolute;
+    font-size: 1.25rem;
+    left: -1.5rem;
+    top:.75rem;
+    color: #888;
+    opacity: .4;
+  }
+
+  .anchor:hover:before {
+    opacity: .8;
+    text-decoration: none;
+  }
 }
