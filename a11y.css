@@ -22,3 +22,12 @@
 #skip-nav a:focus {
   top: 21rem;
 }
+
+/*
+ * Disable animations for some users
+ */
+@media (prefers-reduced-motion: reduce) {
+  .apparition {
+    animation: none;
+  }
+}

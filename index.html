@@ -12,6 +12,8 @@
     <!-- Stylesheets and scripts -->
     <link rel="stylesheet" href="home.css"/>
     <link rel="stylesheet" href="a11y.css"/>
+    <link rel="stylesheet" href="wide.css"
+      media="screen and (min-width: 640px), screen and (min-height: 400px)"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;0,900;1,400&display=swap">
   </head>
   <body>
@@ -24,16 +26,21 @@
     </nav>
     <main class="main">
       <article>
-        <header>
+        <header class="hero">
           <h1 id="a-propos">Je suis <span class="highlight">Miel</span>,</h1>
           <p><strong>
-            Ingénieur’e logiciel.
+            <span class="apparition delay-1">Ingénieur’e logiciel.</span>
             <br class="small-screen"/>
-            Géographe en formation.
+            <span class="apparition delay-2">Géographe en formation.</span>
             <br class="small-screen"/>
-            Débutant’e en roller.
+            <span class="apparition delay-3">Débutant’e en roller.</span>
             <br class="small-screen"/>
           </strong></p>
+          <div class="wide-screen apparition delay-4" aria-hidden="true" role="presentation">
+            <a class="fake-button" title="Passer à la suite" href="#contenu">
+              <span class="icon">↓</span> Dis-m’en plus
+            </a>
+          </div>
         </header>
         <br id="contenu"/>
         <p>
