@@ -1,8 +1,35 @@
-:root {
-  /* --theme passes WCAG AAA on large text, AA on normal text */
+/*
+ * Dark mode support; in both light and dark modes,
+ * --theme passes WCAG AAA on large text, AA on normal text
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme: #e15;
+    --background: #000;
+    --body: #eee;
+  }
+
+  .highlight {
+    background: none;
+    color: var(--theme);
+  }
+}
+
+:root, :root.light-mode {
   --theme: #e15;
   --background: #f7f7f7;
   --body: #222;
+}
+
+:root.dark-mode {
+  --theme: #e15;
+  --background: #000;
+  --body: #eee;
+}
+
+.dark-mode .highlight {
+  background: none;
+  color: var(--theme);
 }
 
 /*
@@ -106,6 +133,13 @@ strong {
   margin: 0 .1rem;
   text-align: center;
   width: 1em;
+}
+
+#twilight {
+  background: var(--background);
+  border: 1px solid var(--body);
+  color: var(--body);
+  cursor: pointer;
 }
 
 .highlight {
