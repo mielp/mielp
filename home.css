@@ -1,0 +1,103 @@
+:root {
+  /* --theme passes WCAG AAA on large text, AA on normal text */
+  --theme: #e15;
+  --background: #f7f7f7;
+  --body: #222;
+}
+
+/*
+ * Main formatting
+ */
+
+html {
+  /* Desired fonts, acceptable system fonts, fallback fonts */
+  /* see https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/ */
+  font-family: source-sans-pro, 'Source Sans Pro',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Ubuntu, Cantarell, 'Fira Sans', Inter, 'Helvetica Neue', sans-serif;
+  font-size: 16pt;
+  height: 100%;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--body);
+  margin: 0;
+  min-height: 100%;
+  /* Fancier background and decoration */
+  background-image:
+    radial-gradient(#e154 2%, transparent 2%),
+    radial-gradient(#09e4 2%, transparent 2%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  border-top: .2rem solid var(--theme);
+  transition: background-color .5s;
+}
+
+.main {
+  display: block;
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 .5rem;
+  transition: font-size .2s;
+}
+
+p {
+  margin: 0 0 3rem;
+  overflow-wrap: break-word;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+a {
+  color: var(--theme);
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+/*
+ * Fancy-ish decorations
+ */
+
+.highlight {
+  background-image: linear-gradient(90deg, var(--body), var(--theme) 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/*
+ * Alternative styling for small screens
+ */
+
+.small-screen {
+  display: none;
+}
+
+@media screen and (max-width: 640px), screen and (max-height: 400px) {
+  .small-screen { display: initial; }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
