@@ -11,13 +11,21 @@
     <link rel="canonical" href="https://miel.lly.fr"/>
     <!-- Stylesheets and scripts -->
     <link rel="stylesheet" href="home.css"/>
+    <link rel="stylesheet" href="a11y.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;0,900;1,400&display=swap">
   </head>
   <body>
+    <nav id="skip-nav">
+      <ul>
+        <li><a href="#a-propos">Qui suis-je</a></li>
+        <li><a href="#contenu">Passer aux détails</a></li>
+        <li><a href="#contact">Passer aux liens de contact</a></li>
+      </ul>
+    </nav>
     <main class="main">
       <article>
         <header>
-          <h1>Je suis <span class="highlight">Miel</span>,</h1>
+          <h1 id="a-propos">Je suis <span class="highlight">Miel</span>,</h1>
           <p><strong>
             Ingénieur’e logiciel.
             <br class="small-screen"/>
@@ -27,6 +35,7 @@
             <br class="small-screen"/>
           </strong></p>
         </header>
+        <br id="contenu"/>
         <p>
           Je suis intéressé’e par les problématiques sociales et environnementales.
           Je crois en des processus durables de résolution de ces enjeux, qui
@@ -48,7 +57,7 @@
           associatif, PME, e&#8209;commerce…).
           N’hésitez pas à venir discuter de votre projet !
         </p>
-        <p>
+        <p id="contact">
           Je suis présent’e
           sur <a href="https://twitter.com/softpandarou">Twitter</a>,
           sur <a href="https://t.me/pandarou">Telegram</a>,
