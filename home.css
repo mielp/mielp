@@ -157,6 +157,11 @@ strong {
   color: transparent;
 }
 
+/* Fix for IE 11 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .highlight { color: black; }
+}
+
 @keyframes apparition {
   0% { opacity: 0; transform: translateX(10px); }
   to { transform: translateX(0); }
