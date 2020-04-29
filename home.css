@@ -64,11 +64,19 @@ body {
   transition: background-color .5s;
 }
 
-.main {
+.main, .footer {
   display: block;
   max-width: 38rem;
   margin: 0 auto;
+}
+
+.main {
   padding: 2rem 1rem 0;
+}
+
+.footer {
+  font-size: 75%; /* 12pt for a body size of 16pt */
+  padding: 0 1rem 2rem;
 }
 
 h1 {
