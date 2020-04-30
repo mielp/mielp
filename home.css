@@ -132,13 +132,6 @@ strong {
   width: 1em;
 }
 
-#twilight {
-  background: var(--background);
-  border: 1px solid var(--body);
-  color: var(--body);
-  cursor: pointer;
-}
-
 .highlight {
   background-image: linear-gradient(90deg, var(--body), var(--theme) 90%);
   background-clip: text;

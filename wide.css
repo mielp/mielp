@@ -12,6 +12,7 @@
     display: table-cell;
     height: calc(100vh - 4rem);
     vertical-align: middle;
+    border-bottom: 2rem solid transparent;
   }
 
   .anchor {
@@ -21,15 +22,15 @@
   .anchor:before {
     content: '#';
     position: absolute;
-    font-size: 1.25rem;
     left: -1.5rem;
-    top:-.25rem;
     color: #888;
     opacity: .4;
+    transition: color .2s;
   }
 
-  .anchor:hover:before {
-    opacity: .8;
+  .anchor:hover:before, .anchor:focus:before {
+    opacity: 1;
+    color: var(--theme);
     text-decoration: none;
   }
 }
