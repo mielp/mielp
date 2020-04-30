@@ -15,21 +15,10 @@
   }
 }
 
-:root, :root.light-mode {
+:root {
   --theme: #e15;
   --background: #f7f7f7;
   --body: #222;
-}
-
-:root.dark-mode {
-  --theme: #e15;
-  --background: #000;
-  --body: #eee;
-}
-
-.dark-mode .highlight {
-  background: none;
-  color: var(--theme);
 }
 
 /*
