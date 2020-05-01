@@ -14,23 +14,4 @@
     vertical-align: middle;
     border-bottom: 2rem solid transparent;
   }
-
-  .anchor {
-    position: relative;
-  }
-
-  .anchor:before {
-    content: '#';
-    position: absolute;
-    left: -1.5rem;
-    color: #888;
-    opacity: .4;
-    transition: color .2s;
-  }
-
-  .anchor:hover:before, .anchor:focus:before {
-    opacity: 1;
-    color: var(--theme);
-    text-decoration: none;
-  }
 }
