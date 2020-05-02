@@ -89,10 +89,11 @@ h1, h2 {
 p {
   margin: 0 0 1.5rem;
   overflow-wrap: break-word;
-	word-wrap: break-word;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-spacing: .03em;
+  word-wrap: break-word;
 }
 
 a {
