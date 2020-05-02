@@ -52,7 +52,7 @@ body {
 
 .main, .footer {
   display: block;
-  max-width: 38rem;
+  max-width: 34rem;
   margin: 0 auto;
 }
 
@@ -182,5 +182,24 @@ strong {
 
   h1 {
     font-size: 3rem;
+  }
+}
+
+/*
+ * Alternative styling for wide screens
+ */
+
+@media screen and (min-width: 640px) and (min-height: 400px) {
+  .small-screen { display: none; }
+  .wide-screen { display: initial; }
+
+  /*
+   * Fancy decorations
+   */
+  .hero {
+    display: table-cell;
+    height: calc(100vh - 4rem);
+    vertical-align: middle;
+    border-bottom: 2rem solid transparent;
   }
 }
