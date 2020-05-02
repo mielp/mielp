@@ -74,7 +74,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.5rem -.5rem;
   padding-top: 1.5rem;
 }
 
@@ -179,10 +179,8 @@ strong {
 @media screen and (max-width: 640px), screen and (max-height: 400px) {
   .small-screen { display: initial; }
   .wide-screen { display: none; }
-
-  h1 {
-    font-size: 3rem;
-  }
+  h1 { font-size: 3rem; }
+  h2 { margin-left: 0; }
 }
 
 /*
