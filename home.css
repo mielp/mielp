@@ -1,10 +1,9 @@
 /*
- * Dark mode support; in both light and dark modes,
- * --theme passes WCAG AAA on large text, AA on normal text
+ * Color schemes (light is the default)
  */
 @media (prefers-color-scheme: dark) {
   :root {
-    --theme: #e15;
+    --theme: #df3442; /* Contrast: 4.7:1 */
     --background: #000;
     --body: #eee;
   }
@@ -16,7 +15,7 @@
 }
 
 :root {
-  --theme: #e15;
+  --theme: #d42130; /* Contrast: 4.82:1 */
   --background: #f7f7f7;
   --body: #222;
 }
@@ -45,12 +44,11 @@ body {
   min-height: 100%;
   /* Fancier background and decoration */
   background-image:
-    radial-gradient(#e154 2%, transparent 2%),
-    radial-gradient(#09e4 2%, transparent 2%);
+    radial-gradient(#e154 2%, transparent 3%),
+    radial-gradient(#15e4 2%, transparent 3%);
   background-size: 60px 60px;
   background-position: 0 0, 30px 30px;
   border-top: .2rem solid var(--theme);
-  transition: background-color .5s;
 }
 
 .main, .footer {
@@ -91,7 +89,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover, a:focus {
   text-decoration: underline;
 }
 
@@ -110,8 +108,7 @@ strong {
 .fake-button {
   background: var(--theme);
   border-radius: .5rem;
-  color: var(--background);
-  display: inline-block;
+  color: white;
   font-weight: 400;
   line-height: 1;
   padding: .5rem .75rem;
