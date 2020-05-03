@@ -1,5 +1,6 @@
 /*
  * Color schemes (light is the default)
+ * :root variables are kept for reference
  */
 @media (prefers-color-scheme: dark) {
   :root {
@@ -8,15 +9,15 @@
     --body: #eee;
   }
 
-  .highlight {
-    background: none;
-    color: var(--theme);
+  body {
+    background: #000
+      radial-gradient(#111 1px, #000 1px) top left / 5px 5px;
+    border-top: .2rem solid #df3442;
+    color: #eee;
   }
 
-  body {
-    background: var(--background)
-      radial-gradient(#111 1px, var(--background) 1px) top left / 5px 5px;
-  }
+  a, .highlight { color: #df3442; }
+  .fake-button { background: #df3442; }
 }
 
 :root {
@@ -24,6 +25,16 @@
   --background: #fcfcfc;
   --body: #222;
 }
+
+body {
+  background: #fcfcfc
+    radial-gradient(#e7e7e7 1px, #fcfcfc 1px) top left / 5px 5px;
+  border-top: .2rem solid #d42130;
+  color: #222;
+}
+
+a, .highlight { color: #d42130; }
+.fake-button { background: #d42130; }
 
 /*
  * Main formatting
@@ -42,12 +53,8 @@ html {
 }
 
 body {
-  background: var(--background)
-    radial-gradient(#e7e7e7 1px, var(--background) 1px) top left / 5px 5px;
-  color: var(--body);
   margin: 0;
   min-height: 100%;
-  border-top: .2rem solid var(--theme);
 }
 
 .main, .footer {
@@ -96,7 +103,6 @@ p {
 }
 
 a {
-  color: var(--theme);
   font-weight: bolder;
   text-decoration: none;
 }
@@ -153,7 +159,6 @@ strong {
 }
 
 .fake-button {
-  background: var(--theme);
   border-radius: .5rem;
   color: white;
   font-weight: 400;
@@ -174,18 +179,6 @@ strong {
   margin: 0 .1rem;
   text-align: center;
   width: 1em;
-}
-
-.highlight {
-  background-image: linear-gradient(90deg, var(--body), var(--theme) 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-/* Fix for IE 11 */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .highlight { color: black; }
 }
 
 @keyframes apparition {
