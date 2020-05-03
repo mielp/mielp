@@ -69,7 +69,6 @@ body {
 h1 {
   font-size: 4rem;
   margin: 0 0 .5rem;
-  transition: font-size .2s;
 }
 
 h2 {
@@ -113,10 +112,6 @@ strong {
 /*
  * Fancy-ish decorations
  */
-
-.hero {
-  transition: height .3s;
-}
 
 .hero p {
   margin-bottom: 3rem;
@@ -192,9 +187,6 @@ strong {
   .small-screen { display: none; }
   .wide-screen { display: initial; }
 
-  /*
-   * Fancy decorations
-   */
   .hero {
     display: table-cell;
     height: calc(100vh - 4rem);
