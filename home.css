@@ -12,11 +12,16 @@
     background: none;
     color: var(--theme);
   }
+
+  body {
+    background: var(--background)
+      radial-gradient(#111 1px, var(--background) 1px) top left / 5px 5px;
+  }
 }
 
 :root {
-  --theme: #d42130; /* Contrast: 4.82:1 */
-  --background: #f7f7f7;
+  --theme: #d42130; /* Contrast: 5.0:1 */
+  --background: #fcfcfc;
   --body: #222;
 }
 
@@ -37,16 +42,11 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: var(--background)
+    radial-gradient(#e7e7e7 1px, var(--background) 1px) top left / 5px 5px;
   color: var(--body);
   margin: 0;
   min-height: 100%;
-  /* Fancier background and decoration */
-  background-image:
-    radial-gradient(#e154 2%, transparent 3%),
-    radial-gradient(#15e4 2%, transparent 3%);
-  background-size: 60px 60px;
-  background-position: 0 0, 30px 30px;
   border-top: .2rem solid var(--theme);
 }
 
