@@ -88,6 +88,8 @@ p {
 
 a {
   border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   padding: .1rem .3rem;
   text-decoration: none;
   transition: background-color .2s, color .2s;
