@@ -18,7 +18,7 @@ a:hover, a:focus {
 @media (prefers-color-scheme: dark) {
   body {
     background: black;
-    color: #eee;
+    color: floralwhite;
   }
 
   /* Contrast: 4.7:1 */
@@ -93,10 +93,6 @@ a {
   padding: .1rem .3rem;
   text-decoration: none;
   transition: background-color .2s, color .2s;
-}
-
-a:hover, a:focus {
-  text-decoration: none;
 }
 
 a, strong {

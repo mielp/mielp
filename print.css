@@ -1,12 +1,8 @@
 @media print {
-  html {
-    font-size: 12pt;
-  }
-
+  html { font-size: 12pt; }
   body {
-    border: none;
-    background: #fff;
-    color: #000;
+    background: white;
+    color: #222;
   }
 
   h1 {
@@ -14,23 +10,19 @@
     font-weight: bold;
   }
 
-  .hero {
-    display: block;
-    height: auto;
-  }
+  .highlight { color: inherit; }
+  .social { margin-left: 0; }
+  .social a { display: block; }
 
-  .highlight {
-    background: none;
-    color: inherit;
-  }
-
-  #skip-nav, .hero .fake-button {
+  #skip-nav, .social .separator {
     display: none;
   }
 
-  a[href^='https://']:after, a[href^='mailto:']:after {
+  a { padding: 0; }
+  a[href]:after {
     content: ' (' attr(href) ')';
-    color: var(--body);
+    color: #222;
+    font-size: 75%;
     font-weight: 400;
   }
 }
