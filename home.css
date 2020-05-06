@@ -120,6 +120,7 @@ h1, h2, .tagline, .social {
 
 .social {
   word-spacing: .5rem;
+  line-height: 2;
 }
 
 /*
