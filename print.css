@@ -1,20 +1,44 @@
 @media print {
-  html { font-size: 12pt; }
+  html {
+    font-family: 'Libertinus Serif', 'Linux Libertine', 'Georgia', 'Times', serif;
+    font-size: 10.5pt;
+  }
   body {
-    background: white;
+    background: none;
     color: #222;
+    padding: unset;
+    margin: unset;
+    max-width: unset;
   }
 
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
+  article {
+    columns: 2;
+    column-fill: auto;
+    column-gap: 1em;
+  }
+
+  .headline { font-size: 3rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h1, h2 {
+    font-weight: normal;
+    margin: 0;
+  }
+  h1, h2, .tagline, .social {
+    text-transform: unset;
+  }
+  h1, .byline {
+    column-span: all;
+  }
+  .byline {
+    border-bottom: 1px solid #666;
   }
 
   .highlight { color: inherit; }
   .social { margin-left: 0; }
   .social a { display: block; }
 
-  #skip-nav, .social .separator {
+  #skip-nav, .separator, .header, .footer {
     display: none;
   }
 
