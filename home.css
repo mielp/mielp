@@ -9,11 +9,12 @@ body {
 
 /* Contrast: 4.9:1 */
 a, .highlight { color: #d42130; }
-blockquote { border-left-color: #d42130; };
+blockquote { border-left-color: #d42130; }
 
 a:hover, a:focus {
   background: #d42130;
   color: floralwhite;
+  text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -88,9 +89,10 @@ p {
 }
 
 blockquote {
-  margin: 0 0 1.5rem 1rem;
-  padding-left: .5rem;
-  border-radius: 3px;
+  margin: 0 0 1.5rem;
+  padding-left: 1.3rem;
+  border-left-width: .2rem;
+  border-left-style: solid;
 }
 
 a {
@@ -98,7 +100,7 @@ a {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   padding: 2px 3px;
-  text-decoration: none;
+  text-decoration: underline dotted;
   transition: background-color .2s, color .2s;
 }
 
