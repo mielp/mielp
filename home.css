@@ -10,12 +10,7 @@ body {
 /* Contrast: 4.9:1 */
 a, .highlight { color: #d42130; }
 blockquote { border-left-color: #d42130; }
-
-a:hover, a:focus {
-  background: #d42130;
-  color: floralwhite;
-  text-decoration: none;
-}
+a:hover, a:focus { background: #ffe877; }
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -25,12 +20,8 @@ a:hover, a:focus {
 
   /* Contrast: 4.7:1 */
   a, .highlight { color: #df3442; }
-  blockquote { border-left-color: #df3442; };
-
-  a:hover, a:focus {
-    background: #df3442;
-    color: black;
-  }
+  blockquote { border-left-color: #df3442; }
+  a:hover, a:focus { background: #333322; }
 }
 
 /*
@@ -38,10 +29,7 @@ a:hover, a:focus {
  */
 
 html {
-  /* Preferred font, acceptable system fonts, fallback fonts */
-  font-family: source-sans-pro, 'Source Sans Pro',
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell,
-    'Fira Sans', Inter, 'Helvetica Neue', 'Open Sans', sans-serif;
+  font-family: 'Libertinus Serif', 'Linux Libertine', Georgia, Times, serif;
   font-size: 16pt;
   line-height: 1.5;
   scroll-behavior: smooth;
@@ -65,9 +53,8 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0 0 .5rem;
-  font-weight: 900;
   letter-spacing: -.01em;
   line-height: 1;
   word-spacing: .05em;
@@ -91,17 +78,14 @@ p {
 blockquote {
   margin: 0 0 1.5rem;
   padding-left: 1.3rem;
-  border-left-width: .2rem;
+  border-left-width: 3px;
   border-left-style: solid;
 }
 
 a {
-  border-radius: 3px;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  padding: 2px 3px;
+  border-radius: 2px;
   text-decoration: underline dotted;
-  transition: background-color .2s, color .2s;
+  transition: background-color .1s;
 }
 
 a, strong {
@@ -131,15 +115,8 @@ h1, h2, .tagline, .social {
 
 .small-screen { display: none; }
 
-@media screen and (max-width: 640px), screen and (max-height: 400px) {
+@media screen and (max-width: 680px), screen and (max-height: 400px) {
+  html { font-size: 14pt; }
   .small-screen { display: initial; }
-  .headline { font-size: 3rem; }
-  h1 { font-size: 2.5rem; }
-  h2 { margin-left: 0; }
-
-  blockquote {
-    border-left-width: 3px;
-    border-left-style: solid;
-    margin-left: 0;
-  }
+  h2, blockquote { margin-left: 0; }
 }

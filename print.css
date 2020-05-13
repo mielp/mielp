@@ -1,8 +1,6 @@
 @media print {
-  html {
-    font-family: 'Libertinus Serif', 'Linux Libertine', 'Georgia', 'Times', serif;
-    font-size: 10.5pt;
-  }
+  html { font-size: 10.5pt; }
+
   body {
     background: none;
     color: #222;
@@ -42,7 +40,7 @@
     display: none;
   }
 
-  a { padding: 0; }
+  a { text-decoration: none; }
   a[href]:after {
     content: ' (' attr(href) ')';
     color: #222;
