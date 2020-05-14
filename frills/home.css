@@ -29,7 +29,7 @@ a:hover, a:focus { background: #ffe877; }
  */
 
 html {
-  font-family: 'Libertinus Serif', 'Linux Libertine', Georgia, Times, serif;
+  font-family: 'Libertinus Serif', 'Hoefler Text', 'Linux Libertine', Georgia, Times, serif;
   font-size: 16pt;
   line-height: 1.5;
   scroll-behavior: smooth;
@@ -38,7 +38,7 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 34rem;
+  max-width: 30rem;
   padding: 2rem 1rem;
 }
 
