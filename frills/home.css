@@ -12,7 +12,6 @@ a {
   box-shadow: inset 0 -.4em #bbb;
 }
 a:hover, a:focus { box-shadow: inset 0 -.5em #b383da; }
-.avi { stroke: #222 }
 
 .dark body {
   background: black;
@@ -21,6 +20,8 @@ a:hover, a:focus { box-shadow: inset 0 -.5em #b383da; }
 .dark a { box-shadow: inset 0 -.4em #444; }
 .dark a:hover, .dark a:focus { box-shadow: inset 0 -.5em #5d357d; }
 .dark .avi { stroke: #f7f7f7; }
+.dark .nb2 { fill: #fff; }
+.dark .nb3 { fill: #9b59d0; }
 
 /* Main formatting */
 
@@ -62,7 +63,7 @@ p {
   box-sizing: border-box;
   display: block;
   margin: 0 auto;
-  height: 6em;
+  width: 6em;
 }
 
 .nb {
@@ -70,8 +71,6 @@ p {
   margin: 0 auto 1.5em;
   width: 5em;
 }
-.dark .nb2 { fill: #fff; }
-.dark .nb3 { fill: #9b59d0; }
 
 #twilight {
   background: none;
