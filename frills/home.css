@@ -19,7 +19,7 @@ a:hover, a:focus { box-shadow: inset 0 -.5em #b383da; }
 }
 .dark a { box-shadow: inset 0 -.4em #444; }
 .dark a:hover, .dark a:focus { box-shadow: inset 0 -.5em #5d357d; }
-.dark .avi { stroke: #f7f7f7; }
+.dark .avi path { stroke: #f7f7f7; }
 .dark .nb2 { fill: #fff; }
 .dark .nb3 { fill: #9b59d0; }
 
