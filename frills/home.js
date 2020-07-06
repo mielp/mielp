@@ -2,25 +2,36 @@
 'use strict';
 
 /*
- * Basic toggle for dark and light modes
+ * Basic toggle for dark and light themes
  */
 
+// Document references
 let btn = document.getElementById('twilight');
 let query = window.matchMedia('(prefers-color-scheme: dark)');
 let classList = document.documentElement.classList;
-let isDark = query.matches;
 
-let toggle = function (dark) {
+// Select the desired theme
+let isDark = query.matches;
+let storedTheme = localStorage.getItem('theme');
+if (storedTheme !== null) {
+  isDark = (storedTheme === 'dark');
+}
+classList.toggle('dark', isDark);
+btn.innerText = isDark ? '🌙' : '☀️';
+
+// Change the theme and optionally store it
+let toggle = function (dark, store) {
   isDark = dark;
   classList.toggle('dark', isDark);
-  if (btn !== undefined) {
-    btn.innerText = isDark ? '🌙' : '☀️';
+  btn.innerText = isDark ? '🌙' : '☀️';
+
+  if (store) {
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  } else {
+    localStorage.removeItem('theme');
   }
 };
 
-query.addListener(e => toggle(e.matches));
-toggle(isDark);
-
-if (btn !== undefined) {
-  btn.addEventListener('click', e => toggle(!isDark));
-}
+// Event listeners
+query.addListener(e => toggle(e.matches, false));
+btn.addEventListener('click', e => toggle(!isDark, true));
