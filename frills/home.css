@@ -12,15 +12,17 @@ a {
 }
 a:hover, a:focus { box-shadow: inset 0 -.5em #b383da; }
 
-.dark body {
-  background: black;
-  color: #f7f7f7;
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: #151311;
+    color: #f7f7f7;
+  }
+  a { box-shadow: inset 0 -.4em #444; }
+  a:hover, a:focus { box-shadow: inset 0 -.5em #5d357d; }
+  .avi path { stroke: #f7f7f7; }
+  .nb2 { fill: #fff; }
+  .nb3 { fill: #9b59d0; }
 }
-.dark a { box-shadow: inset 0 -.4em #444; }
-.dark a:hover, .dark a:focus { box-shadow: inset 0 -.5em #5d357d; }
-.dark .avi path { stroke: #f7f7f7; }
-.dark .nb2 { fill: #fff; }
-.dark .nb3 { fill: #9b59d0; }
 
 /* Main formatting */
 
@@ -69,17 +71,6 @@ p {
   display: block;
   margin: 0 auto 1.5em;
   width: 5em;
-}
-
-#twilight {
-  background: none;
-  border: none;
-  display: inline-block;
-  font-size: 2em;
-  position: absolute;
-  top: .5em;
-  right: .5em;
-  padding: 0;
 }
 
 /* Animations */
