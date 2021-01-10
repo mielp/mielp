@@ -4,7 +4,9 @@
     --fg: #222;
   }
 
-  html { font-size: 11pt; }
+  html {
+    font-size: 11pt;
+  }
 
   body {
     padding: unset;
@@ -21,7 +23,7 @@
   }
 
   a[href]:after {
-    content: ' (' attr(href) ')';
+    content: " (" attr(href) ")";
     color: #222;
     font-size: 75%;
     font-weight: 400;
