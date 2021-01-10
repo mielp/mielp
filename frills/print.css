@@ -1,20 +1,21 @@
 @media print {
+  :root {
+    --bg: #fff;
+    --fg: #222;
+  }
+
   html { font-size: 11pt; }
 
-  body, .dark body {
-    background: none;
-    color: #222;
+  body {
     padding: unset;
     margin: unset;
+  }
+
+  main {
     max-width: unset;
   }
 
-  .dark .avi { stroke: #222; }
-  .hero { display: block; }
-  .footer { text-align: initial; }
-  #twilight { display: none; }
-
-  a, .dark a {
+  a {
     box-shadow: none;
     color: blue;
   }
@@ -24,5 +25,9 @@
     color: #222;
     font-size: 75%;
     font-weight: 400;
+  }
+
+  .shadow {
+    text-shadow: unset;
   }
 }
