@@ -92,6 +92,10 @@ small {
   body {
     padding: 1em;
   }
+
+  .avi {
+    margin: auto;
+  }
 }
 
 /* Decorations */
@@ -121,8 +125,18 @@ small {
   }
 }
 
+@keyframes snake {
+  from {
+    stroke-dasharray: 550;
+  }
+  to {
+    stroke-dasharray: 520 30;
+  }
+}
+
 .avi path {
-  animation: 1.3s linear both draw;
+  animation: 1.3s linear both draw, 1.3s 0s linear both snake,
+    5.2s 1.3s linear infinite draw;
 }
 
 @media (prefers-reduced-motion) {
