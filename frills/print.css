@@ -9,6 +9,7 @@
   }
 
   body {
+    display: initial;
     padding: unset;
     margin: unset;
   }
@@ -29,7 +30,9 @@
     font-weight: 400;
   }
 
-  .shadow {
-    text-shadow: unset;
+  .avi {
+    float: none;
+    font-size: 0.75em;
+    margin: 1em 0 2em;
   }
 }

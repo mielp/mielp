@@ -1,11 +1,11 @@
 {
-  "name": "Flop",
-  "short_name": "Flop",
+  "name": "Miel Pandarou",
+  "short_name": "Miel P.",
   "lang": "fr",
   "description": "Salut ! Je fais du web et du roller.",
   "display": "standalone",
-  "scope": "https://flop.lly.fr",
-  "start_url":  "https://flop.lly.fr",
+  "scope": "https://miel.lly.fr",
+  "start_url":  "https://miel.lly.fr",
   "icons": [{
     "src": "/frills/icons/icon-192.png",
     "sizes": "192x192",
@@ -15,6 +15,6 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "theme_color": "#3d4d5c",
-  "background_color": "#f7cfba"
+  "theme_color": "#c587c5",
+  "background_color": "#f9f6f5"
 }

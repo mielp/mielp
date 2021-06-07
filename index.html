@@ -3,118 +3,173 @@
   <head>
     <!-- Important meta -->
     <meta charset="utf-8" />
-    <title>Flop</title>
+    <title>Miel Pandarou</title>
     <meta name="description" content="Salut ! Je fais du web et du roller." />
-    <meta name="keywords" content="lgbt, flop, personal, homepage" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="no-referrer" />
-    <link rel="canonical" href="https://flop.lly.fr" />
+    <link rel="canonical" href="https://miel.lly.fr" />
+    <!-- Inline layout-critical CSS -->
+    <style>
+      html {
+        font-family: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, Lato,
+          Helvetica, Arial, sans-serif;
+        font-size: 125%;
+        font-size-adjust: 0.49;
+        height: 100%;
+        line-height: 1.5;
+      }
+
+      body {
+        align-items: center;
+        box-sizing: border-box;
+        display: grid;
+        min-height: 100%;
+        margin: 0;
+        padding: 1.5em 2em;
+      }
+
+      main {
+        margin: 0 auto;
+        max-width: 50ch;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: 0 0 0.75em;
+        line-height: 1;
+      }
+
+      p {
+        margin: 0 0 1.5em;
+      }
+
+      small {
+        font-size: 0.75em;
+        line-height: 2;
+      }
+
+      .avi {
+        border-radius: 50%;
+        box-sizing: border-box;
+        float: left;
+        margin: 0 1em 1em -5em;
+        shape-outside: margin-box;
+        width: 12em;
+      }
+
+      .avi img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      .flag {
+        width: 1.5em;
+        border-radius: 4px;
+      }
+
+      @media screen and (max-width: 35rem) {
+        body {
+          padding: 1em;
+        }
+
+        .avi {
+          float: none;
+          font-size: 0.75em;
+          margin: 1em auto 2em;
+        }
+      }
+    </style>
     <!-- Stylesheets and scripts -->
-    <link rel="stylesheet" href="/frills/home.css" />
-    <link rel="stylesheet" href="/frills/print.css" media="print" />
+    <link rel="stylesheet" href="/frills/home.css?u=2105" />
+    <link rel="stylesheet" href="/frills/print.css?u=2105" media="print" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/frills/fonts/Atkinson-Hyperlegible-Regular-102a.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/frills/fonts/Atkinson-Hyperlegible-Bold-102a.woff2" />
     <!-- Icons and PWA -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/frills/icons/icon-180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/frills/icons/icon-32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/frills/icons/icon-16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/frills/icons/icon-180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/frills/icons/icon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/frills/icons/icon-16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- Social -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://flop.lly.fr" />
-    <meta
-      property="og:image"
-      content="https://flop.lly.fr/frills/icons/icon-192.png"
-    />
-    <meta property="og:title" content="Flop" />
-    <meta property="og:site_name" content="Flop" />
+    <meta property="og:url" content="https://miel.lly.fr" />
+    <meta property="og:image" content="https://miel.lly.fr/frills/icons/icon-192.png" />
+    <meta property="og:title" content="Miel Pandarou" />
+    <meta property="og:site_name" content="Miel Pandarou" />
     <meta property="og:locale" content="fr_FR" />
-    <meta
-      property="og:description"
-      content="Salut ! Je fais du web et du roller."
-    />
+    <meta property="og:description" content="Salut ! Je fais du web et du roller." />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@softpandarou" />
-    <meta name="twitter:title" content="Flop" />
-    <meta
-      name="twitter:image:src"
-      content="https://flop.lly.fr/frills/icons/icon-512.png"
-    />
-    <meta
-      name="twitter:description"
-      content="Salut ! Je fais du web et du roller."
-    />
+    <meta name="twitter:title" content="Miel Pandarou" />
+    <meta name="twitter:image" content="https://miel.lly.fr/frills/icons/icon-512.png" />
+    <meta name="twitter:description" content="Salut ! Je fais du web et du roller." />
   </head>
   <body>
-    <header>
-      <svg
-        class="avi"
-        role="img"
-        aria-labelledby="avi-id"
-        viewBox="0 0 100 100"
-        width="120"
-      >
-        <title id="avi-id">Flop</title>
-        <path
-          fill="none"
-          stroke="#222"
-          stroke-width="1"
-          d="m19 56c9 7 23 7 32 0.47 9.5-6.5 12-19 6.9-29-5-9.1-18-15-28-12-6.1 1.8-9.9 7.7-9.2 13 0.73 8.8 7.7 16 14 22 5.3 5.9 10 13 8.9 21-0.82 6-6.8 11-14 11-8.6-0.46-15-8.6-14-16 0.53-8.7 7.6-16 15-20 7.9-5 17-9.1 22-17 1.9-2.6 0.07-6.9-3.7-6.3-5.1 0.93-7.7 6-8.3 10-0.92 7.4 2.4 15 2.7 22 0.22 3.1 2.4 6.9 6.3 6.6 4.3-0.67 5.3-5.1 5.9-8.4 0.4-3.8 3.4-7.6 7.8-7.9 5.2-0.65 10 4 8.9 8.7-0.8 4.7-7.1 7.4-12 5.2-6.6-2.8-8-11-6.1-16 1.2-4.8 6.4-9.3 12-8 3.5 0.7 6 4.2 7 7.3 1 4.4 1 9.1-1.9 13-3.5 6.6-11 12-10 20 0 4.6 4.7 9.4 10 8.2 5.3-1.3 6.8-7.3 4.9-12-2.8-7.3-10-13-10-21-0.38-4.9 4.1-10 9.9-9.7 4.7 0.39 6.1 4.9 6.1 8.5 0.66 3.4 2.5 6.5 5.1 9"
-        />
-      </svg>
-    </header>
     <main>
-      <h1>Coucou&#8239;! Je suis Flop. <span role="presentation">🌻</span></h1>
+      <div class="avi">
+        <img
+          src="/roulette.jpg"
+          width="220"
+          height="220"
+          alt="photo de moi portant mon matériel de roller : casque customisé, masque, et autres protections"
+        />
+      </div>
+      <h1>Miel Pandarou</h1>
       <p>
-        Dans la vie de tous les jours, je réalise des sites web. Je pense qu’il
-        est possible et nécessaire de rendre la technologie
-        <strong>inclusive</strong> et <strong>durable</strong>, et que cela
-        passe par une prise de conscience et de responsabilités dans nos
-        projets.
+        Je réalise des sites web et je pratique le roller en ville. Quand mon TDAH le permet, je m’intéresse au design, au climat,
+        aux droits LGBTI+, et à ce qu’il se passe dans le monde.
       </p>
+      <p>Je considère que la technologie doit être <strong>inclusive</strong> et <strong>durable</strong>.</p>
       <p>
-        Le reste du temps, quand mon TDAH le permet, je feuillette des journaux
-        et des blogs, sur des sujets liés au design, à l’actualité à différentes
-        échelles, sur la politique, le féminisme, les droits LGBTI, ou encore
-        l’environnement.
+        Je suis sur
+        <a href="https://twitter.com/softpandarou">Twitter</a>, <a rel="me" href="https://eldritch.cafe/@flop">Mastodon</a>,
+        <a href="https://t.me/pandarou">Telegram</a> et <a href="https://github.com/mielp">GitHub</a>. Tu peux aussi m’envoyer un
+        <a href="mailto:miel@lly.fr">e&#8209;mail</a>. Pronom iel, accords masculins, tmtc.
       </p>
-      <p>
-        Sinon, je pratique le roller en ville (mon objectif pour 2021 est
-        d’apprendre à faire des <em>powerslides</em>), et j’essaie de faire des
-        choses douces quand j’y pense, car la bienveillance, c’est punk.
-      </p>
-      <p>
-        Je suis disponible sur
-        <a href="https://twitter.com/softpandarou">Twitter</a>, sur
-        <a rel="me" href="https://eldritch.cafe/@flop">Mastodon</a>, sur
-        <a href="https://t.me/pandarou">Telegram</a>, sur
-        <a href="https://github.com/mielp">GitHub</a>, ou via
-        <a href="mailto:flop@lly.fr">e&#8209;mail</a>. Je préfère qu’on utilise
-        le pronom iel et des accords neutres si possible.
-      </p>
-      <p>
-        À toute&#8239;! <span role="presentation" class="shadow">✌️✨</span>
-      </p>
+      <footer>
+        <span>
+          <svg class="flag" role="img" viewBox="0 0 6 4" aria-labelledby="flag-nb">
+            <title id="flag-nb">Drapeau non-binaire</title>
+            <rect width="6" height="1" fill="#f7d56e" />
+            <rect y="1" width="6" height="1" fill="#fcfcfc" />
+            <rect y="2" width="6" height="1" fill="#c587c5" />
+            <rect y="3" width="6" height="1" fill="#3b3b3b" />
+          </svg>
+          <svg class="flag" role="img" viewBox="0 0 6 4" aria-labelledby="flag-aq">
+            <title id="flag-aq">Drapeau queer anarchiste</title>
+            <rect width="6" height="4" fill="#3b3b3b" />
+            <polygon points="0,0 6,4 6,0" fill="#ff90cb" />
+          </svg>
+          <svg class="flag" role="img" viewBox="0 0 6 4" aria-labelledby="flag-sp">
+            <title id="flag-sp">Drapeau solarpunk</title>
+            <rect width="6" height="4" fill="#217d40" />
+            <polygon points="0,0 6,0 0,4" fill="#0d3b52" />
+            <circle cx="3" cy="2" r="0.9" stroke-dasharray="0.28" fill="#d9b110" stroke="#d9b110" />
+          </svg>
+          <svg class="flag" role="img" viewBox="0 0 6 4" aria-labelledby="flag-bp">
+            <title id="flag-bp" lang="en">Black Lives Matter</title>
+            <rect width="6" height="4" fill="#111" />
+            <rect width="2" height="3" x="2" y="0.5" fill="#fff" />
+            <g
+              style="font-family: sans-serif; font-size: 2px; font-weight: 600"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              role="presentation"
+            >
+              <text x="1" y="2.2" fill="#fff">B</text>
+              <text x="3" y="2.2" fill="#111">L</text>
+              <text x="5" y="2.2" fill="#fff">M</text>
+            </g>
+          </svg>
+        </span>
+        <br />
+        <small>
+          ©&thinsp;2020&#8209;2021 Miel Pandarou.
+          <a href="https://github.com/mielp/home">Source</a>.
+        </small>
+      </footer>
     </main>
-    <footer class="footer">
-      <span class="emoji shadow"> 🌈🏳️‍⚧️✊🏿♿🌱🛼🏴 </span>
-      <small>
-        ©&thinsp;2020&#8209;2021 Flop.
-        <a href="https://github.com/mielp/home">Source</a>.
-      </small>
-    </footer>
   </body>
 </html>
