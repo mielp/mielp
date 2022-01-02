@@ -1,6 +1,6 @@
 {
-  "name": "Miel Pandarou",
-  "short_name": "Miel P.",
+  "name": "Méli Pandarou",
+  "short_name": "Méli P.",
   "lang": "fr",
   "description": "Salut ! Je fais du web et du roller.",
   "display": "standalone",
@@ -15,6 +15,6 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "theme_color": "#c587c5",
+  "theme_color": "#f7d56e",
   "background_color": "#f9f6f5"
 }

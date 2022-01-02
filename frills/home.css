@@ -4,6 +4,7 @@
   --bg: hsl(10, 25%, 97%);
   --fg: #3b3b3b;
   --link: hsl(45, 90%, 70%);
+  --visited: #6b6b6b;
   --rainbow: linear-gradient(70deg, #d60270, #fef42f, #00a1e8);
   --shadow: hsla(300, 35%, 65%, 30%);
 }
@@ -13,6 +14,7 @@
     --bg: #1f1f1f;
     --fg: hsl(10, 25%, 97%);
     --link: hsl(300, 35%, 38%);
+    --visited: hsl(10, 25%, 80%);
   }
 }
 
@@ -43,6 +45,14 @@ a {
   z-index: 1;
 }
 
+a:active {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--visited);
+}
+
 a::before {
   background: var(--link);
   border-radius: 5px;
@@ -64,22 +74,17 @@ a:focus::before {
 
 /* Decorations */
 
-.avi {
-  border: 0.5em solid var(--bg);
-  box-shadow: inset 0 0 0 0.5em var(--shadow);
-  position: relative;
-}
-
 .avi::before {
   content: "";
-  background: var(--rainbow);
-  border-radius: 50%;
+  background: var(--link);
+  border-radius: 22%;
   position: absolute;
-  top: -0.65em;
-  left: -0.65em;
-  bottom: -0.65em;
-  right: -0.65em;
+  top: 0.3em;
+  left: -0.15em;
+  bottom: -0.3em;
+  right: -0.3em;
   z-index: -2;
+  transform: rotateZ(-5deg);
 }
 
 .avi img {
@@ -99,6 +104,12 @@ svg text {
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   user-select: none;
+}
+
+@media (prefers-reduced-motion) {
+  a::before {
+    transition: none;
+  }
 }
 
 /* Font family */
