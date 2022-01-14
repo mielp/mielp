@@ -1,9 +1,12 @@
-/* Color schemes */
+/**
+ * Color schemes are easier to manage when centralized
+ */
 
 :root {
   --bg: hsl(10, 25%, 97%);
   --fg: #3b3b3b;
   --link: hsl(45, 90%, 70%);
+  --link-outline: hsl(300, 35%, 38%);
   --visited: #6b6b6b;
   --rainbow: linear-gradient(70deg, #d60270, #fef42f, #00a1e8);
   --shadow: hsla(300, 35%, 65%, 30%);
@@ -14,6 +17,7 @@
     --bg: #1f1f1f;
     --fg: hsl(10, 25%, 97%);
     --link: hsl(300, 35%, 38%);
+    --link-outline: hsl(45, 90%, 70%);
     --visited: hsl(10, 25%, 80%);
   }
 }
@@ -28,6 +32,7 @@ html {
 body {
   background: var(--bg);
   color: var(--fg);
+  /** Proper french <q>uotes **/
   quotes: "« " " »" "“" "”";
 }
 
@@ -67,12 +72,26 @@ a::before {
   z-index: -1;
 }
 
+/**
+ * We could animate height and bottom instead of transforms,
+ * but animations on transforms have way better performance
+ */
 a:hover::before,
 a:focus::before {
   transform: rotateZ(-2deg) scaleY(2) translateY(-0.2em);
 }
 
-/* Decorations */
+/**
+ * Highly visible outlines are helpful, for instance for keyboard navigation
+ */
+a:active,
+a:focus {
+  outline: 2px solid var(--link-outline);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Other decorations */
 
 .avi::before {
   content: "";
@@ -85,11 +104,6 @@ a:focus::before {
   right: -0.3em;
   z-index: -2;
   transform: rotateZ(-5deg);
-}
-
-.avi img {
-  position: relative;
-  z-index: -1;
 }
 
 .flag {
@@ -106,13 +120,19 @@ svg text {
   user-select: none;
 }
 
+/**
+ * Reduce animations for users that have this configured
+ * (for instance visitors with motion sickness)
+ */
 @media (prefers-reduced-motion) {
   a::before {
     transition: none;
   }
 }
 
-/* Font family */
+/**
+ * Font family: https://brailleinstitute.org/freefont
+ */
 
 @font-face {
   font-display: fallback;

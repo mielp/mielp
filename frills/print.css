@@ -23,7 +23,11 @@
     color: blue;
   }
 
-  a[href]:after {
+  a::before {
+    background: none;
+  }
+
+  a[href]::after {
     content: " (" attr(href) ")";
     color: #222;
     font-size: 75%;
@@ -31,8 +35,8 @@
   }
 
   .avi {
-    float: none;
-    font-size: 0.75em;
-    margin: 1em 0 2em;
+    float: left;
+    margin: 0 1em 0 0;
+    width: 8em;
   }
 }
